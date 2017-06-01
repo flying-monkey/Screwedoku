@@ -53,7 +53,6 @@ class Board
     grid.size
   end
 
-
   def solved?
     rows.all? { |row| solved_set?(row) } &&
       columns.all? { |col| solved_set?(col) } &&
