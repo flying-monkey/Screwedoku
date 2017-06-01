@@ -10,7 +10,7 @@ class SudokuGame
   end
 
   def initialize(board)
-    @board = [[]]
+    @board = board
   end
 
   def method_missing(method_name, *args)
@@ -49,6 +49,14 @@ class SudokuGame
       val = parse_val(gets.chomp)
     end
     val
+  end
+
+  def parse_pos(string)
+    string.split(',').map(&:to_i)
+  end
+
+  def parse_val(string)
+    Integer(string)
   end
 
   def play_turn
