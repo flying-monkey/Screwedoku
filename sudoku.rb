@@ -6,6 +6,8 @@ class SudokuGame
     self.new(board)
   end
 
+
+
   def initialize(board)
     @board = board
   end
