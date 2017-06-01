@@ -1,6 +1,9 @@
 require_relative "board"
+require 'byebug'
 
 class SudokuGame
+  attr_reader :board
+
   def self.from_file(filename)
     board = Board.from_file(filename)
     self.new(board)
@@ -47,9 +50,12 @@ class SudokuGame
   end
 
   def play_turn
+
+
     board.render
     pos = get_pos
     val = get_val
+
     board[pos] = val
   end
 
